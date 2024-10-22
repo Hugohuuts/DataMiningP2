@@ -23,7 +23,7 @@ def main():
     print("Multinomial_Naive_Bayes Unigrams: ")    
     #pas corssvalidation toe om de juiste hyperparameters te vinden (unigrams)
     min_df, alpha = CV_naive_bayes(train_df, 1)
-    Multinomial_Naive_Bayes(train_df,test_df, 1, 0.005, 0.5)
+    Multinomial_Naive_Bayes(train_df,test_df, 1, min_df, alpha)
     
     
     print("Multinomial_Naive_Bayes Bigrams: ")
@@ -31,13 +31,13 @@ def main():
     min_df, alpha = CV_naive_bayes(train_df, 2)
     Multinomial_Naive_Bayes(train_df,test_df, 2, min_df, alpha)
 
-    print("Logistic_Regression_Lasso Unigrams: ")
-    min_df, C = CV_logistic_regression_lasso(train_df, 1)    
-    Logistic_Regression_Lasso(train_df,test_df, 1, min_df, C)
+    # print("Logistic_Regression_Lasso Unigrams: ")
+    # min_df, C = CV_logistic_regression_lasso(train_df, 1)    
+    # Logistic_Regression_Lasso(train_df,test_df, 1, min_df, C)
     
-    print("Logistic_Regression_Lasso Bigrams: ")
-    min_df, C = CV_logistic_regression_lasso(train_df, 2)    
-    Logistic_Regression_Lasso(train_df,test_df, 2, min_df, C)
+    # print("Logistic_Regression_Lasso Bigrams: ")
+    # min_df, C = CV_logistic_regression_lasso(train_df, 2)    
+    # Logistic_Regression_Lasso(train_df,test_df, 2, min_df, C)
 
 
     # Classification_Tree(train_df,test_df, 2)
